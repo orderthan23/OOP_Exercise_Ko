@@ -6,7 +6,7 @@ import member.model.vo.Member;
 
 public class MemberManager {
 
-	private static Member[] m = new Member[3];
+	private static Member[] m = new Member[10];
 	private static int ctn = 0;
 	private Scanner scan = new Scanner(System.in);
 
