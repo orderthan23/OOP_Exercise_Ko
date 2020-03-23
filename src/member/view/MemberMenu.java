@@ -119,9 +119,9 @@ while(true) {
 			
 			switch(select) {
 			
-			case 1: MemberManager.deleteOne();break;
-			case 2: mm.updateName();break;
-			case 3: mm.updateEmail();break;
+			case 1: mm.deleteOne();break;
+			case 2: mm.deleteAll();break;
+			
 			case 9: System.out.println("메인 메뉴로 이동합니다."); return;
 			default: System.out.println("잘못된 입력입니다 다시하세요 ");continue;
 			}
