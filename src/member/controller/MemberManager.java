@@ -18,6 +18,7 @@ public class MemberManager {
 		char gender;
 		int age;
 		for (int i = 0; i < m.length; i++) {
+			System.out.println((i+1)+"번째 회원");
 			System.out.print("아이디를 입력하시오 :");
 			id = scan.next();
 			System.out.print("패스워드를 입력하시오 :");
@@ -30,6 +31,8 @@ public class MemberManager {
 			gender = scan.next().charAt(0);
 			System.out.print("이메일을 입력하시오 :");
 			email = scan.next();
+			System.out.println("===============");
+			System.out.println();
 
 			m[i] = new Member(id, pwd, name, age, gender, email);
 			
@@ -85,7 +88,7 @@ public class MemberManager {
 		int count = 0;
 		for (int i = 0; i < ctn; i++) {
 			if (m[i].getUserId().equals(str)) {
-				System.out.println("변경할 비밀번호를 입력해주세요");
+				System.out.print("변경할 비밀번호를 입력해주세요");
 				String newPw = scan.next();
 				m[i].setUserPwd(newPw);
 				System.out.println("패스워드 수정이 완료되었습니다 ");
@@ -107,7 +110,7 @@ public class MemberManager {
 		int count = 0;
 		for (int i = 0; i < ctn; i++) {
 			if (m[i].getUserId().equals(str)) {
-				System.out.println("변경할 이름을 입력해주세요");
+				System.out.print("변경할 이름을 입력해주세요");
 				String newName = scan.next();
 				m[i].setUserName(newName);
 				System.out.println("이름 수정이 완료되었습니다 ");
@@ -129,7 +132,7 @@ public class MemberManager {
 		int count = 0;
 		for (int i = 0; i < ctn; i++) {
 			if (m[i].getUserId().equals(str)) {
-				System.out.println("변경할 이메일를 입력해주세요");
+				System.out.print("변경할 이메일를 입력해주세요");
 				String newEmail = scan.next();
 				m[i].setEmail(newEmail);
 				System.out.println("이메일 수정이 완료되었습니다 ");
@@ -204,12 +207,15 @@ public class MemberManager {
 
 	public void printAllMember() {
 		for (int i=0; i<ctn; i++) {
+			System.out.println((i+1)+"번째 회원");
 			System.out.println("아이디 :" + m[i].getUserId());
 			System.out.println("패스워드 :" + m[i].getUserPwd());
 			System.out.println("이름 :" + m[i].getUserName());
 			System.out.println("나이 :" + m[i].getAge());
 			System.out.println("성별 :" + m[i].getGender());
 			System.out.println("이메일 :" + m[i].getEmail());
+			System.out.println("=================");
+			System.out.println();
 		}
 
 	}
