@@ -189,7 +189,7 @@ public class MemberManager {
 			m[i].setUserPwd(null);
 			m[i].setUserName(null);
 			m[i].setAge(0);
-			m[i].setGender((char)0000);
+			m[i].setGender('\u0000');
 			m[i].setEmail(null);
 		}
 		ctn=0;
