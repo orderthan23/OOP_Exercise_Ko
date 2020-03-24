@@ -17,8 +17,8 @@ public class MemberManager {
 		String id, pwd, name, email;
 		char gender;
 		int age;
-		for (int i = 0; i < m.length; i++) {
-			System.out.println((i+1)+"번째 회원");
+		
+			System.out.println((ctn+1)+"번째 회원");
 			System.out.print("아이디를 입력하시오 :");
 			id = scan.next();
 			System.out.print("패스워드를 입력하시오 :");
@@ -34,10 +34,10 @@ public class MemberManager {
 			System.out.println("===============");
 			System.out.println();
 
-			m[i] = new Member(id, pwd, name, age, gender, email);
+			m[ctn] = new Member(id, pwd, name, age, gender, email);
 			
 			ctn++;
-		}
+		
 		System.out.println("입력이 완료되었습니다. 메인메뉴로 돌아갑니다");
 
 	}
